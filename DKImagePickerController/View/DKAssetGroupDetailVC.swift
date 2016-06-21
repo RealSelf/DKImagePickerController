@@ -32,7 +32,7 @@ internal class DKAssetGroupDetailVC: UIViewController, UICollectionViewDelegate,
 			self.contentView.addSubview(cameraButton)
 			self.cameraButton = cameraButton
 			
-			self.contentView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+            self.contentView.backgroundColor = UIColor(red: 20.0/255.0, green: 129.0/255.0, blue: 252.0/255.0, alpha: 1.0)
 		}
 		
 		required init?(coder aDecoder: NSCoder) {
