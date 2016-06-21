@@ -41,7 +41,7 @@ public class DKImageResource {
     }
     
     class func cameraImage() -> UIImage {
-        return imageForResource("camera")
+        return imageForResource("camera_new")
     }
     
     class func videoCameraIcon() -> UIImage {

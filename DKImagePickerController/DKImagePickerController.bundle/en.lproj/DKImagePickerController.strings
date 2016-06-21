@@ -8,7 +8,7 @@
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
-"select" = "Select(%ld)";
+"select" = "Upload(%ld)";
 
 "permissionCamera" = "Please Allow Camera Access";
 
