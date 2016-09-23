@@ -1,5 +1,45 @@
 # Change Log
 
+## [3.4.0](https://github.com/zhangao0086/DKImagePickerController/tree/3.4.0) (2016-09-18)
+
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.4...3.4.0)
+
+- Migrating to swift3
+
+## [3.3.4](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.4) (2016-08-16)
+
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.3...3.3.4)
+
+- Fixed an issue may cause singleSelect doesn't work as it should.
+
+## [3.3.3](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.3) (2016-08-08)
+
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.2...3.3.3)
+
+- Added Carthage support
+
+- Added Urdu lozalization
+
+- Added German localization
+
+- Added `deselectAssetAtIndex` and `deselectAsset`.
+
+- Added `deselectAllAssets`.
+
+- Fixed an issue may cause `takePicture` is incorrect.
+
+- If a camera is not available, don't pops-up "Max photos limit reached".
+
+- The `didCancel` and `didSelectAssets` are executed after completion.
+
+- Updated DKImagePickerControllerDefaultUIDelegate interface.
+
+- Rename `unselectedImage` to `deselectImage`.
+
+- Rename `selectedImage` to `selectImage`. 
+
+- Replace tags with spaces.
+
 ## [3.3.2](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.2) (2016-06-20)
 
 [Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.1...3.3.2)

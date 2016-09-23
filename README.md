@@ -1,7 +1,8 @@
 DKImagePickerController
 =======================
 
- [![Build Status](https://secure.travis-ci.org/zhangao0086/DKImagePickerController.svg)](http://travis-ci.org/zhangao0086/DKImagePickerController) [![Version Status](http://img.shields.io/cocoapods/v/DKImagePickerController.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink]
+ [![Build Status](https://secure.travis-ci.org/zhangao0086/DKImagePickerController.svg)](http://travis-ci.org/zhangao0086/DKImagePickerController) [![Version Status](http://img.shields.io/cocoapods/v/DKImagePickerController.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Screenshot1.png" /><img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Screenshot2.png" />
 ---
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Screenshot3.png" /><img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Screenshot4.png" />
@@ -25,6 +26,7 @@ It's a Facebook style Image Picker Controller by Swift. It uses [DKCamera][DKCam
 ## Requirements
 * iOS 8.0+
 * ARC
+* Swift 3 and Xcode 8
 
 ## Installation
 #### iOS 8 and newer
@@ -41,6 +43,9 @@ pod 'DKImagePickerController'
 
 > To use Swift libraries on apps that support iOS 7, you must manually copy the files into your application project.
 [CocoaPods only supports Swift on OS X 10.9 and newer, and iOS 8 and newer.](https://github.com/CocoaPods/blog.cocoapods.org/commit/6933ae5ccfc1e0b39dd23f4ec67d7a083975836d)
+
+#### Swift 2.2
+> For Swift 2.2, use version <= 3.3.4
 
 ## Getting Started
 #### Initialization and presentation
@@ -152,7 +157,7 @@ pickerController.sourceType = .Camera
 ```
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Exhibit1.gif" />
 
-##### Customize footer view
+##### Customize footer view and UI color
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/zhangao0086/DKImagePickerController/develop/Screenshot11.png" />
 
 #### Create a custom camera
@@ -260,6 +265,9 @@ It has been supported languages so far:
 * hu.lproj
 * ru.lproj
 * es.lproj
+* tr.lproj
+* de.lproj
+* ur.lproj
 
 If you want to add new language, pull request or issue!
 
@@ -268,49 +276,44 @@ You can merge your branch into the `develop` branch. Any Pull Requests to be wel
 
 ## Change Log
 
-> In `3.2.1`, I've replaced all  `AVURLAsset` to `AVAsset` in order to support Slow Motion.
+## [3.4.0](https://github.com/zhangao0086/DKImagePickerController/tree/3.4.0) (2016-09-18)
 
-> In `3.2.0`
-> * I changed the `sourceType` type to `enum` in order to access the property in Objective-C. You can use `.Both` instead of `[.Camera, .Photo]`.
-> * I've also updated the `fetchAVAsset...` interface:  
-> the `completeBlock: (avAsset: AVURLAsset?` was changed to `completeBlock: (avAsset: AVURLAsset?, info: [NSObject : AnyObject]?`.
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.4...3.4.0)
 
-## [3.3.0](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.0) (2016-06-17)
+- Migrating to swift3
 
-[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.2.1...3.3.0)
+## [3.3.3](https://github.com/zhangao0086/DKImagePickerController/tree/3.3.3) (2016-08-08)
 
-**Merged pull requests:**
+[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.3.2...3.3.3)
 
-- Fix the thumbnails have low quality.
+- Added Carthage support
 
-- Added Turkish localization support.
+- Added Urdu lozalization
 
-- Added footer view.
+- Added German localization
 
-- Removed picker singleton.
+- Added `deselectAssetAtIndex` and `deselectAsset`.
 
-- Updated DKImagePickerControllerDefaultUIDelegate.
+- Added `deselectAllAssets`.
 
-## [3.2.1](https://github.com/zhangao0086/DKImagePickerController/tree/3.2.1) (2016-05-23)
+- Fixed an issue may cause `takePicture` is incorrect.
 
-[Full Changelog](https://github.com/zhangao0086/DKImagePickerController/compare/3.2.0...3.2.1)
+- If a camera is not available, don't pops-up "Max photos limit reached".
 
-**Merged pull requests:**
+- The `didCancel` and `didSelectAssets` are executed after completion.
 
-- Add Russian translation.
+- Updated DKImagePickerControllerDefaultUIDelegate interface.
 
-- Fixed an issue may cause popoverView show in incorrect position.
+- Rename `unselectedImage` to `deselectImage`.
 
-- Optimized memory usage with large files.
+- Rename `selectedImage` to `selectImage`. 
 
-- Added support for Slow Motion.
+- Replace tags with spaces.
 
 > [More logs...](https://github.com/zhangao0086/DKImagePickerController/blob/develop/CHANGELOG.md)
 
 ## Special Thanks
-Thanks for [scottdelly][scottdelly]'s [contribution][scottdellyCon] and [performance improvement][scottdellyCon1]!  
-Thanks for [LucidityDesign][LucidityDesign]'s [contribution][LucidityDesignCon]!  
-Thanks for [AnthonyMDev][AnthonyMDev]'s [contribution][scottdellyCon]!
+Big thanks to all the [contributors][contributors] so far!
 
 ## License
 DKImagePickerController is released under the MIT license. See LICENSE for details.
@@ -318,9 +321,4 @@ DKImagePickerController is released under the MIT license. See LICENSE for detai
 [docsLink]:http://cocoadocs.org/docsets/DKImagePickerController
 [mitLink]:http://opensource.org/licenses/MIT
 [DKCamera]:https://github.com/zhangao0086/DKCamera
-[scottdelly]:https://github.com/scottdellyDKImagePickerController
-[scottdellyCon]:https://github.com/zhangao0086/DKImagePickerController/graphs/contributors
-[scottdellyCon1]:https://github.com/zhangao0086/DKImagePickerController/pull/24/commits
-[LucidityDesign]:https://github.com/LucidityDesign
-[LucidityDesignCon]:https://github.com/zhangao0086/DKImagePickerController/pull/19/commits
-[AnthonyMDev]:https://github.com/AnthonyMDev
+[contributors]:https://github.com/zhangao0086/DKImagePickerController/graphs/contributors
